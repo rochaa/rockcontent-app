@@ -1,0 +1,33 @@
+<div class="form-inline">
+  <h2 class="mt-2"><i class="fa fa-history me-2"></i>Lastest articles</h2>
+  <input [(ngModel)]="searchText" class="form-control-sm ms-4 me-4" placeholder="Keyword in the article">
+</div>
+
+<div class="list-unstyled mt-3" *ngIf="articlesFiltered">
+  <div *ngFor="let article of articlesFiltered | filter : searchText">
+
+    <div class="d-flex align-items-center mt-5" *ngIf="article">
+
+      <div class="flex-shrink-0">
+        <img src="assets/user-icon.png">
+      </div>
+
+      <div class="flex-grow-1 fw-bold ms-3">
+        {{ article.author }} <br>
+        {{ article.datePublished | date: 'dd/MM/yyyy' }}
+      </div>
+
+    </div>
+
+    <div class="flex-grow-1 fw-bold"> {{ article.title }} </div>
+    <p> {{ article.text }} </p>
+
+    <button class="btn" (click)="like(article.id, article.userMarkLiked)">
+      <div [ngClass]="{'like': article.userMarkLiked, 'noLike' : !article.userMarkLiked }">
+        <i class="fa fa-thumbs-up"></i>
+        <span class="badge text-dark">{{ article.countLikes }}</span>
+      </div>
+    </button>
+
+  </div>
+</div>

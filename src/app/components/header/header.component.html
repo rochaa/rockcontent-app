@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-        <img class="forum-img-icon" src="assets/rock-icon.png" />
+        <img class="article-img-icon" src="assets/rock-icon.png" />
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#home" aria-controls="home"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,9 @@
             </li>
         </ul>
         <div class="user-menu me-4">
-            <img src="assets/user-icon.png" />
+            <span>{{ user }}</span>
+            <img src="assets/user-icon.png" class="ms-4" />
+            <button class="btn-primary ms-4" (click)="logoff()"> LogOff </button>
         </div>
     </div>
 </nav>

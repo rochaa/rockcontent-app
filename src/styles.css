@@ -28,3 +28,10 @@ body {
     color: green;
     font-size: 1.2em;
 }
+
+.noLike {
+    padding: 0px;
+    margin-right: 7px;
+    color: gray;
+    font-size: 1.2em;  
+}
