@@ -20,7 +20,7 @@
 
 Wait a few seconds for the application to finish compiling in the container.
 
-> docker run --rm -d -p 4333:4200 rockcontent-app
+> docker run --rm -d -p 4334:4200 rockcontent-app
 
 ## Local tests (angular)
 
